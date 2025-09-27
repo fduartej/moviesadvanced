@@ -12,5 +12,27 @@
     ></script>
     <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script type="text/babel">
+    function MyButton() {
+      return <button>I'm a button</button>;
+    }
+
+    export default function MyApp() {
+      return (
+        <div>
+          <h1>Welcome to my app</h1>
+          <MyButton />
+        </div>
+      );
+    }
+    const root = createRoot(document.getElementById("root"));
+    root.render(
+      <StrictMode>
+        <App />
+      </StrictMode>
+    );
+  </script>
 </html>
