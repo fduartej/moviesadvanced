@@ -35,7 +35,7 @@ function App() {
     fetch(MOVIES_URL)
       .then((res) => res.json())
       .then((data) => {
-        const uniqueMovies = [];
+        /*const uniqueMovies = [];
         const ids = new Set();
         for (const m of data) {
           if (!ids.has(m.id)) {
@@ -43,7 +43,12 @@ function App() {
             ids.add(m.id);
           }
         }
-        setMovies(uniqueMovies);
+        setMovies(uniqueMovies);*/
+        const allMovies = [];
+        for (const m of data) {
+          allMovies.push(m);
+        }
+        setMovies(allMovies);
       });
   }, []);
 
