@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Movies Advanced</title>
     <link rel="stylesheet" href="css/styles.css" />
     <script
@@ -15,6 +18,19 @@
   </head>
   <body>
     <div id="header"></div>
+
+    <h1
+      class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-8 text-center bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text"
+    >
+      Movies Advanced
+    </h1>
+
+    <button
+      class="bg-sky-500 hover:bg-sky-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-opacity-50"
+    >
+      Save changes
+    </button>
+
     <div id="moviesgrid"></div>
     <script type="text/babel" src="js/app.js"></script>
     <script type="text/babel" src="js/movies.js"></script>
