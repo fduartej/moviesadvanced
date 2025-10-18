@@ -3,6 +3,7 @@ let gameStarted = false;
 
 // Función para iniciar el juego
 function startGame() {
+  console.log("startGame called, gameStarted:", gameStarted);
   if (gameStarted) return;
 
   gameStarted = true;
@@ -13,6 +14,7 @@ function startGame() {
   startBtn.classList.remove("bg-green-500", "hover:bg-green-600");
 
   // Iniciar spawn de monedas
+  console.log("Starting coin spawn...");
   spawnCoin();
   setInterval(spawnCoin, 3000);
 }
@@ -78,11 +80,18 @@ document.addEventListener("keydown", function (event) {
 });
 
 function spawnCoin() {
-  if (!gameStarted) return; // Solo crear monedas si el juego ha comenzado
+  console.log("spawnCoin called, gameStarted:", gameStarted);
+  if (!gameStarted) return;
 
   const coin = document.createElement("div");
   coin.classList.add("coin");
   const gameContainer = document.querySelector(".game-container");
+
+  if (!gameContainer) {
+    console.error("Game container not found!");
+    return;
+  }
+
   const gameWidth = gameContainer.clientWidth;
   const gameHeight = gameContainer.clientHeight;
 
@@ -92,10 +101,20 @@ function spawnCoin() {
   coin.style.left = `${coinX}px`;
   coin.style.top = `${coinY}px`;
 
+  console.log("Spawning coin at:", coinX, coinY);
   gameContainer.appendChild(coin);
 
+  // Verificar que la moneda se añadió
+  console.log(
+    "Coin added, total coins:",
+    document.querySelectorAll(".coin").length
+  );
+
   setTimeout(() => {
-    coin.remove();
+    if (coin.parentNode) {
+      coin.remove();
+      console.log("Coin removed after timeout");
+    }
   }, 5000);
 }
 
