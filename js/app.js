@@ -41,14 +41,6 @@ function Header() {
             </li>
             <li>
               <a
-                href="calculadora.html"
-                className="text-white hover:text-blue-400 font-medium transition-colors duration-200 hover:underline underline-offset-4"
-              >
-                Calculadora
-              </a>
-            </li>
-            <li>
-              <a
                 href="game.html"
                 className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 shadow-md hover:shadow-lg"
               >
