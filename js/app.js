@@ -17,7 +17,7 @@ function Header() {
           <ul className="flex space-x-6 items-center">
             <li>
               <a
-                href="#"
+                href="index.html"
                 className="text-white hover:text-blue-400 font-medium transition-colors duration-200 hover:underline underline-offset-4"
               >
                 Home
@@ -25,7 +25,7 @@ function Header() {
             </li>
             <li>
               <a
-                href="#"
+                href="index.html"
                 className="text-white hover:text-blue-400 font-medium transition-colors duration-200 hover:underline underline-offset-4"
               >
                 Movies
